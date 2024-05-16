@@ -1,0 +1,97 @@
+button {
+    border-radius: 5px; /* Reduzi o raio da borda */
+    background-color: black;
+    color: white; /* Alterei a cor do texto para branco para ser visível */
+    border: none; /* Removi a borda padrão */
+    padding: 1px 16px; /* Reduzi o padding para diminuir o tamanho */
+    margin: 0 5px; /* Adicionei margem entre os botões */
+}
+
+nav {
+    border-radius: 5px;
+    margin: auto;
+    border: 1px solid black; /* Adicionei uma borda sólida preta */
+    display: flex; /* Usei flexbox para alinhar os itens lado a lado */
+    justify-content: flex-end; /* Alinha os itens no canto direito */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%; /* Define a largura como 100% */
+}
+.navbar p {
+    margin: 0 5px; /* Reduzi a margem entre os itens */
+}
+
+h3 {
+    margin-right: auto; /* Move o h3 para a extremidade esquerda */
+}
+
+.navbar {
+    display: flex;
+}
+.meio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Ajuste o valor do margin-top para aproximar da barra de navegação */
+    min-height: calc(50vh - 50px); /* Define uma altura mínima para ocupar o restante da tela */
+}
+
+.meio h1 {
+    margin-bottom: 10px; /* Adiciona margem na parte inferior do título */
+}
+
+.meio p {
+    margin-bottom: 20px; /* Adiciona margem na parte inferior do parágrafo */
+}
+
+.meio button {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+ /* Estilo para centralizar o conteúdo da página */
+ body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cnc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Espaçamento entre as divs */
+}
+
+#ferramentas img,
+#cnc img {
+    margin-right: 20px; /* Adiciona espaço à direita da imagem */
+}
+
+#ferramentas h1,
+#cnc h1,
+#ferramentas p,
+#cnc p {
+    margin: 0; /* Remove margem padrão */
+}
+
+#ferramentas {
+    flex-direction: row; /* Alinha a imagem à esquerda e o texto à direita */
+}
+
+#cnc {
+    flex-direction: row-reverse; /* Inverte a ordem da imagem e do texto */
+}
+
+/* Estilo com a imagem à esquerda e o texto à direita */
+#cnc img,
+#ferramentas p {
+    order: 2; /* Altera a ordem de exibição */
+}
+
+/* Estilo com o texto à esquerda e a imagem à direita */
+#cnc h1,
+#ferramentas img {
+    order: 1; /* Altera a ordem de exibição */
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Senai</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <h3>Senai</h3>
+        <div class="navbar">
+            <p>Login</p>
+            <p id="link-itens">Itens</p> <!-- Adiciona um id para o link Itens -->
+            <p>Movimentação</p>
+        </div>
+        <button id="btn-pesquisa">Pesquisa</button>
+    </nav>
+    <div class="meio">
+        <h1>Movimentação</h1>
+        <p>Controle de estoque e patrimônio</p>
+        <button id="btn-iniciar">Iniciar</button>
+    </div>
+    <div id="ferramentas"> <!-- Adiciona um id à seção Ferramentas -->
+        <img src="/img/ferramentas.png" alt="" height="150px" width="150px">
+        <h1>Ferramentas</h1>
+        <p>
+            Instrumento que permite realizar determinados trabalhos.
+            Ferramenta é um instrumento que permite realizar determinados trabalhos. O termo vem do latim "ferramenta", plural de "ferramenta".
+        </p>
+    </div>
+    <div id="cnc">
+        <img src="/img/cnc.png" alt="" width="150px" height="150px">
+        <h1>Torno cnc</h1>
+        <p>Peças interligadas com funções específicas, e em que o trabalho humano é substituído pela ação do mecanismo</p>
+    </div>
+
+    <script>
+        // Adiciona um evento de clique ao botão Itens
+        document.getElementById('link-itens').addEventListener('click', function() {
+            // Rola a página até a seção Ferramentas
+            document.getElementById('ferramentas').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+<h2>Adicionar Novo Material</h2>
+<form action="adicionar_material.php" method="post">
+    <label for="nome">Nome do Material:</label><br>
+    <input type="text" id="nome" name="nome"><br>
+    <label for="quantidade">Quantidade:</label><br>
+    <input type="number" id="quantidade" name="quantidade"><br><br>
+    <input type="submit" value="Adicionar Material">
+</form>
+
+<h2>Registrar Movimentação de Estoque</h2>
+    <form action="registrar_movimentacao.php" method="post">
+        <label for="tipo">Tipo:</label><br>
+        <select id="tipo" name="tipo">
+            <option value="entrada">Entrada</option>
+            <option value="saída">Saída</option>
+        </select><br>
+        <label for="material_id">ID do Material:</label><br>
+        <input type="number" id="material_id" name="material_id"><br>
+        <label for="quantidade">Quantidade:</label><br>
+        <input type="number" id="quantidade" name="quantidade"><br><br>
+        <input type="submit" value="Registrar Movimentação">
+    </form>
+
+    
+</body>
+</html>
